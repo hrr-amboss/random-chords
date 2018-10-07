@@ -1,0 +1,25 @@
+<html>
+    <head>
+       
+    </head>
+    <body>
+        <script> 
+            function showChordSymbol(){
+                var chordKey = ["C","F","Bb","Eb","Ab","Db","F#","B","E","A","D","G"]
+                var chordType = ["maj7","-","m7b5","7"]
+                var chordSymbol = chordKey[Math.floor((Math.random() * chordKey.length) + 0)] + chordType[Math.floor((Math.random() * chordType.length) + 0)];
+                alert(chordSymbol);
+            }
+            function metronome(){     
+                setInterval(function(){
+                    var audio = new Audio('blip.wav');
+                    audio.play()
+                }, 1000);  
+            }          
+        </script>
+        <div>Chord symbol</div>
+        <input type="number" name="BMP" min="30" max="320">
+    <button onclick="metronome()">Try it</button>
+    <button onclick="showChordSymbol()">Randon chord symbol</button>
+    </body>
+</html>
